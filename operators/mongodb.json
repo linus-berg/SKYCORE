@@ -1,0 +1,35 @@
+{
+  "name": "mongodb",
+  "manifests": [
+  ],
+  "charts": [
+    {
+      "repo": "https://mongodb.github.io/helm-charts",
+      "chart": "community-operator",
+      "version": "0.9.0"
+    }
+  ],
+  "images": [
+    {
+      "id": "mongo",
+      "image": "docker.io/mongo",
+      "tag": "6.0.5"
+    },
+    {
+      "id": "mongodb-kubernetes-operator",
+      "image": "quay.io/mongodb/mongodb-kubernetes-operator",
+      "tag": "0.9.0"
+    },
+    {
+      "id": "mongodb-kubernetes-operator-version-upgrade-post-start-hook",
+      "image": "quay.io/mongodb/mongodb-kubernetes-operator-version-upgrade-post-start-hook",
+      "tag": "1.0.8"
+    },
+    {
+      "id": "mongodb-kubernetes-readinessprobe",
+      "image": "quay.io/mongodb/mongodb-kubernetes-readinessprobe",
+      "tag": "1.0.17"
+    }
+  ]
+
+}

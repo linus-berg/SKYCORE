@@ -1,0 +1,27 @@
+{
+  "name": "cockroachdb",
+  "manifests": [
+    {
+      "filename": "cockroach-operator-crds-2.13.0.yaml",
+      "url": "https://raw.githubusercontent.com/cockroachdb/cockroach-operator/v2.13.0/install/crds.yaml"
+    },
+    {
+      "filename": "cockroach-operator-2.13.0.yaml",
+      "url": "https://raw.githubusercontent.com/cockroachdb/cockroach-operator/v2.13.0/install/operator.yaml"
+    }
+  ],
+  "charts": [],
+  "images": [
+    {
+      "id": "cockroach-operator",
+      "image": "docker.io/cockroachdb/cockroach-operator",
+      "tag": "v2.13.0"
+    },
+    {
+      "id": "cockroach",
+      "image": "docker.io/cockroachdb/cockroach",
+      "tag": "v23.2.2"
+    }
+  ]
+
+}

@@ -1,0 +1,23 @@
+{
+  "name": "rabbitmq",
+  "manifests": [
+    {
+      "filename": "rabbitmq-operator-2.7.0.yml",
+      "url": "https://github.com/rabbitmq/cluster-operator/releases/download/v2.7.0/cluster-operator.yml"
+    }
+  ],
+  "charts": [],
+  "images": [
+    {
+      "id": "rabbitmq",
+      "image": "docker.io/rabbitmq",
+      "tag": "3.12.2-management"
+    },
+    {
+      "id": "rabbitmq-operator",
+      "image": "docker.io/rabbitmqoperator/cluster-operator",
+      "tag": "2.7.0"
+    }
+  ]
+
+}

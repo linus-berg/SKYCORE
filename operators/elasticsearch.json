@@ -1,0 +1,33 @@
+
+{
+  "name": "elasticsearch",
+  "manifests": [
+    {
+      "filename": "elasticsearch-operator-crds-2.11.1.yaml",
+      "url": "https://download.elastic.co/downloads/eck/2.11.1/crds.yaml"
+    },
+    {
+      "filename": "elasticsearch-operator-rbac-2.11.1.yaml",
+      "url": "https://download.elastic.co/downloads/eck/2.11.1/operator.yaml"
+    }
+  ],
+  "charts": [],
+  "images": [
+    {
+      "id": "elasticsearch",
+      "image": "docker.elastic.co/elasticsearch/elasticsearch",
+      "tag": "8.12.2"
+    },
+    {
+      "id": "eck",
+      "image": "docker.elastic.co/eck/eck-operator",
+      "tag": "2.11.1"
+    },
+    {
+      "id": "kibana",
+      "image": "docker.elastic.co/kibana/kibana",
+      "tag": "8.12.2"
+    }
+  ]
+
+}

@@ -1,0 +1,23 @@
+{
+  "name": "metallb",
+  "manifests": [
+    {
+      "filename": "metallb-native-operator-0.14.3.yaml",
+      "url": "https://raw.githubusercontent.com/metallb/metallb/v0.14.3/config/manifests/metallb-native.yaml"
+    }
+  ],
+  "charts": [],
+  "images": [
+    {
+      "id": "metallb-controller",
+      "image": "quay.io/metallb/controller",
+      "tag": "v0.14.3"
+    },
+    {
+      "id": "metallb-speaker",
+      "image": "quay.io/metallb/controller",
+      "tag": "v0.14.3"
+    }
+  ]
+
+}

@@ -1,0 +1,28 @@
+{
+  "name": "cert-manager",
+  "manifests": [
+    {
+      "filename": "cert-manager-1.7.2.yaml",
+      "url": "https://github.com/jetstack/cert-manager/releases/download/v1.7.2/cert-manager.yaml"
+    }
+  ],
+  "charts": [],
+  "images": [
+    {
+      "id": "cert-manager-cainjector",
+      "image": "quay.io/jetstack/cert-manager-cainjector",
+      "tag": "v1.7.2"
+    },
+    {
+      "id": "cert-manager-controller",
+      "image": "quay.io/jetstack/cert-manager-controller",
+      "tag": "v1.7.2"
+    },
+    {
+      "id": "cert-manager-webhook",
+      "image": "quay.io/jetstack/cert-manager-webhook",
+      "tag": "v1.7.2"
+    }
+  ]
+
+}

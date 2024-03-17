@@ -25,15 +25,29 @@ def GetManifest(filename, url):
 
 def GetHelmChart(name, repo, chart, version):
     print("Helm Chart:", repo, chart, version)
-    subprocess.run([
-        "helm", 
-        "pull",
-        chart,
-        "-d",
-        "output/",
-        "--repo",
-        repo
-        ]) 
+    if (repo.startswith("oci://")):
+        subprocess.run([
+            "helm", 
+            "pull",
+            "--version",
+            version,
+            f"{repo}/{chart}",
+            "-d",
+            "output/"
+            ]) 
+
+    else:
+        subprocess.run([
+            "helm", 
+            "pull",
+            "--version",
+            version,
+            chart,
+            "-d",
+            "output/",
+            "--repo",
+            repo
+            ]) 
     filename = f"output/skycore_chart_{name}_{chart}_{version}.tgz"
     os.rename(f"output/{chart}-{version}.tgz", filename)
  
